@@ -1,12 +1,16 @@
 Changelog for plone.app.dexterity
 =================================
 
-1.2.1 - unreleased
+1.3 - unreleased
 ------------------
 
 - Add upgrade step to make sure that only uninstalling plone.app.intid will
   remove the intids utility.
   [davisagli]
+
+- Add new IConstrainTypes behavior for containers (an implementation of
+  ISelectableConstrainTypes).
+  [davidblewett]
 
 1.2 - 2012-12-20
 ----------------

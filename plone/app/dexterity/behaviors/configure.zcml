@@ -121,4 +121,18 @@
 
     <adapter factory=".nextprevious.NextPreviousEnabled" />
 
+    <!-- Constrain types -->
+    <plone:behavior
+        title="Constrain types"
+        description="Allow containers to restrict addable types"
+        provides=".constraintypes.IConstrainTypes"
+        factory=".constraintypes.ConstrainTypes"
+        for="plone.dexterity.interfaces.IDexterityContainer"
+        />
+    <adapter
+        factory=".constraintypes.ConstrainTypes"
+        for="plone.dexterity.interfaces.IDexterityContainer"
+        provides="Products.CMFPlone.interfaces.ISelectableConstrainTypes"
+        />
+
 </configure>
