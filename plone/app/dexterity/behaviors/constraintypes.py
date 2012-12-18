@@ -94,8 +94,6 @@ class IConstrainTypes(form.Schema):
         vocabulary=constrain_types_modes
     )
     form.omitted('constrain_types_mode')
-    form.no_omit(IAddForm, 'constrain_types_mode')
-    form.no_omit(IEditForm, 'constrain_types_mode')
 
     locally_allowed_types = schema.List(
         title=_(u'label_locally_allowed_types',
@@ -108,8 +106,6 @@ class IConstrainTypes(form.Schema):
         value_type=schema.TextLine(title=u"FTI")
     )
     form.omitted('locally_allowed_types')
-    form.no_omit(IAddForm, 'locally_allowed_types')
-    form.no_omit(IEditForm, 'locally_allowed_types')
 
     immediately_addable_types = schema.List(
         title=_(u'label_immediately_addable_types',
@@ -124,8 +120,6 @@ class IConstrainTypes(form.Schema):
         value_type=schema.TextLine(title=u"FTI")
     )
     form.omitted('immediately_addable_types')
-    form.no_omit(IAddForm, 'immediately_addable_types')
-    form.no_omit(IEditForm, 'immediately_addable_types')
 
 alsoProvides(IConstrainTypes, form.IFormFieldProvider)
 
